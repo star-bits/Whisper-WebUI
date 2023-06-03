@@ -24,11 +24,9 @@ whisper_inf = WhisperInference()
 block = gr.Blocks(css=CSS).queue(api_open=False)
 
 with block:
-    # with gr.Row():
-    #     with gr.Column():
-    #         gr.Markdown(MARKDOWN, elem_id="md_project")
+
     with gr.Tabs():
-        with gr.TabItem("File"):  # tab1
+        with gr.TabItem("File"): 
             with gr.Row():
                 input_file = gr.Files(type="file", label="Upload File here")
             with gr.Row():
@@ -49,7 +47,7 @@ with block:
             btn_openfolder.click(fn=lambda: open_folder("outputs"), inputs=None, outputs=None)
             dd_model.change(fn=on_change_models, inputs=[dd_model], outputs=[cb_translate])
 
-        with gr.TabItem("Youtube"):  # tab2
+        with gr.TabItem("Youtube"): 
             with gr.Row():
                 tb_youtubelink = gr.Textbox(label="Youtube Link")
             with gr.Row().style(equal_height=True):
