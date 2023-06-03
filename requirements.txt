@@ -1,0 +1,4 @@
+torch
+git+https://github.com/openai/whisper.git 
+gradio==3.19.1
+pytube
